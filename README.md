@@ -4,16 +4,16 @@ AtliQ Hardware is growing rapidly in the recent years, and they have decided to 
 
 I worked on this project by following the Codebasics PowerBi Course, Link to the course is here
 
-Live Report Link
+#Live Report Link : : https://lnkd.in/dT3_S3GU
 
-Tech stacks
+#Tech stacks
 SQL
 PowerBi Desktop
 Excel
 DAX language
 DAX studio (for optimizing the report)
-Project charter file
-PowerBI techniques Learnt
+
+# PowerBI techniques Learnt
 What are all the questions should be asked before staring the project
 Creating calculated columns
 creating measure using DAX language
@@ -32,7 +32,8 @@ Setting up personal gateway to set up the auto refresh of data
 PowerBi App creation
 Collaboration, workspace, access permissions in PowerBi services
 And more
-GitHub
+
+#GitHub
 Uploading Large size files using GitHub LFS
 Tracking the particular type of file extensions for LFS
 Business related terms
@@ -50,7 +51,8 @@ Direct
 Retailer
 Distributors
 Consumer
-Company’s back ground
+
+#Company’s background
 AltiQ hardware is a company which has grown vastly in the recent years, and opened business all over the globe. It is a company which sells, computer and computer accessories through three mediums/channel
 
 Retailers
@@ -135,17 +137,27 @@ Post_invoice_deductions
 Post invoice deductions and other deductions details
 Importing data into PowerBi
 As the database is MySQL in this project, we need to import the datasets from Mysql database to PowerBi by providing the Database access credential
-Data Model
+
+#Data Model
 Data modeling plays a vital role and is considered as the basement of report. All the visuals will be build upon the data model.
 Poor data modeling affects the over all performance of the report.
 Following Good practices of data modeling is must. Refer this page to get to know the good practices Blog
 In this project, we have followed Snowfall data modeling method.
+<img width="1554" height="847" alt="data model" src="https://github.com/user-attachments/assets/7aedd1f9-fe42-4fdc-8fc8-05d14e98d5d0" />
 
 
-Dashboard designing
+#Dashboard designing
 Based on the mock ups received as requirement, the team will start designing the visuals and create measure as and when required
+Info Page
+Finance View
+Sales View
+Marketing View
+Supply chain View
+Executive View
 
-Home view
+#Overall Report
+
+#Home view
 In Home view, all the views button will be available. User will land on specific view page by clicking the button
 
 Info
@@ -154,33 +166,30 @@ Sales View
 Marketing View
 Supply chain View
 Executive View
-Products
 Support
-Overall Report
-Overall Report.gif
+<img width="1423" height="845" alt="Screenshot 2026-10-05 113824" src="https://github.com/user-attachments/assets/e8785481-28cf-486d-935e-12b155135406" />
 
-Info Page
-Info.gif
+#Info
+<img width="1423" height="849" alt="info" src="https://github.com/user-attachments/assets/068ed1b4-f3a0-4651-849e-72f00ca8c14d" />
 
-Finance View
-Finace.gif
+#Finance View
+<img width="1419" height="842" alt="Financeview" src="https://github.com/user-attachments/assets/66f3ea50-230d-4477-b959-3dcb636415f0" />
 
-Sales View
-Sales.gif
+#Sales View
+<img width="1465" height="840" alt="Sales View" src="https://github.com/user-attachments/assets/40d4a513-5bbd-4a9d-a05f-96856b71fb20" />
 
-Marketing View
-Marketing.gif
+#Marketing View
+<img width="1427" height="843" alt="Marketingview" src="https://github.com/user-attachments/assets/7b92319c-109e-4306-bdbb-d249d0bf68ce" />
 
-Supply chain View
-Supply chain.gif
+#Supply chain View
+<img width="1426" height="851" alt="Screenshot 2026-10-05 114014" src="https://github.com/user-attachments/assets/f92c191b-c4a7-4ed7-b14c-c3533fe7fe23" />
 
-Executive View
-Executive.gif
+#Executive View
+<img width="1429" height="843" alt="Executive view" src="https://github.com/user-attachments/assets/6c80def3-ffc1-4a71-9bff-e33f4ae32e2a" />
 
-Products
-Products
+#Support
+<img width="1424" height="848" alt="support" src="https://github.com/user-attachments/assets/a117aae9-fcae-455d-850a-22bf09209577" />
 
-you can find the full report file here : Report
 
 Project Outcome
 By using this report, decisions can be taken based on the data. Further it will help in answering n number of why questions based on the situations.
