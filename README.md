@@ -1,195 +1,671 @@
-# Business_Insights_360
+# 📊 Business Insights 360 | Power BI
 
-AtliQ Hardware is growing rapidly in the recent years, and they have decided to implement the data analytics using PowerBi in their company for the first time to surpass their competitors in the market and to make data driven decisions. This project is hoped to give answers to the questions of stakeholder in terms all the aspects like finance, sales, marketing and supply chain.
+## 📌 Project Overview
 
-I worked on this project by following the Codebasics PowerBi Course, Link to the course is here
+**AtliQ Hardware** is a rapidly growing hardware company that operates across multiple countries and sells computers and computer accessories through different channels.
 
-#Live Report Link : : https://lnkd.in/dT3_S3GU
+Due to rapid expansion, the company faced challenges in making **data-driven business decisions**. One of the major setbacks occurred when AtliQ Hardware opened a store in the American market based mainly on surveys, intuition, and Excel-based analysis, which resulted in an unexpected loss.
 
-#Tech stacks
-SQL
-PowerBi Desktop
-Excel
-DAX language
-DAX studio (for optimizing the report)
+To overcome these challenges and compete with organizations that have strong analytics teams, AtliQ Hardware decided to build a **data analytics and business intelligence system using Power BI**.
 
-# PowerBI techniques Learnt
-What are all the questions should be asked before staring the project
-Creating calculated columns
-creating measure using DAX language
-Data modeling
-Using Bookmarks to switch between two visuals
-Page navigation with buttons
-Using divide function to prevent zero division errors
-creating date table using m language
-Dynamic titles based on the applied filters
-Using KPI indicators
-Conditional formatting the values in visuals using icons or background color
-Data validation techniques
-PowerBi services
-Publishing reports to PowerBi services
-Setting up personal gateway to set up the auto refresh of data
-PowerBi App creation
-Collaboration, workspace, access permissions in PowerBi services
-And more
+The goal of this project is to provide actionable insights across different business functions, including:
 
-#GitHub
-Uploading Large size files using GitHub LFS
-Tracking the particular type of file extensions for LFS
-Business related terms
-Gross price
-Pre-invoice deductions
-Post-Invoice deductions
-Net Invoice sale
-Gross Margin
-Net sales
-Net profit
-COGC - cost of goods sold
-YTD - Year to Date
-YTG - Year to Go
-Direct
-Retailer
-Distributors
-Consumer
+* 💰 Finance
+* 📈 Sales
+* 📢 Marketing
+* 🚚 Supply Chain
+* 👔 Executive Management
 
-#Company’s background
-AltiQ hardware is a company which has grown vastly in the recent years, and opened business all over the globe. It is a company which sells, computer and computer accessories through three mediums/channel
+This project was developed by following the **Codebasics Power BI course**.
 
-Retailers
-Direct
-Distributors
-Recently the company has faced a unforeseen loss by opening store in America based on the surveys, intuition and some excel analysis and also the company’s competitors has handful of analytics team to perform analysis and make data driven decision. So, the AltiQ hardware has no other option other than building their analytics team for data driven insights and decisions in the future to survive better in the industry.
+---
 
-Project kick off session, where you should get clear of for what and why this project and all other questions you have with regards to the project
+### 📊 Live Power BI Report
 
-Questions to ask before starting with dashboard
-What is the objective of building this PowerBi dashboard?
-In what terms the success of this project will be measured?
-What will be time dead-line of the project?
-do the stakeholders expecting pre-view before the actual release?
-What are all the hopes stakeholders have out of this project?
-what are all fears the stakeholder have in terms of building this dashboard?
-Who are all will be using this dashboard and for what purpose?
-what are all expectation the stakeholders have, by the completion of this project?
-What can go wrong while building this project?
-what are all the resources/ data needed to build this dashboard?
-is there any inputs from stakeholders in terms of design and views of the dashboard?
-After the project kick off meetings, the data engineering team has given the data as per the request of data analytics team, let’s explore them.
+👉 [View Live Power BI Dashboard](https://lnkd.in/dT3_S3GU)
 
-Dataset Understanding.
-Understanding what data is available will be more helpful while doing analysis. before jumping on to the analysis get good understanding of what are data available.
+### 📁 GitHub Repository
 
-Dimension table : It will have the static data like details of customer and products
+The complete project files, documentation, and supporting resources are available in this repository.
 
-Fact table : It will have the data about the transactions
+---
 
-gdb041:
-dim_customer
-27 distinct markets (ex India, USA, spain)
-75 distinct customers thorough out the market
-2 types of platforms
-Brick & Motors - Physical/offline store
-E-commerce - Online Store (Amazon, flipkart)
-Three channels
-Retailer
-Direct
-Distributors
-dim_market
-27 distinct markets (ex India, USA, spain)
-7 sub-zones
-4 regions
-APAC
-EU
-nan
-LATAM
-dim_product
-Divisions
-P & A
-Peripherals
-Accessories
-PC
-Notebook
-Desktop
-N & S
-Networking
-Storage
-There are 14 different categories, Like Internal HDD, keyboard
-There are different variants available for the same product
-fact_forecast_monthly
-This table is used to forecast the customer’s need in advance, which can help in
-Higher customer satisfaction
-Reduced cost in warehouses for storage purpose
-The table is denormalized by data engineering team, as it is a data warehouse which is aimed to be used for analytical work.
-All the date of the month will be replaced by the start date of the month
-It will have all the column names and in the end it will have the forecast quantity need of the customer
-fact_sales_monthly
-This table is more or less is same as fact_forecase_monthly table, but the last column has the value of sold quantity instead of forecast value.
-gdb056
-freight_cost
-This table has details of travel cost and other cost for each market with fiscal year
-gross_price
-Has the details of gross prices with product code
-manufacturing_cost
-Has the details of manufacturing cost with product code with year
-Pre_invoice_dedutions
-Has the details of pre invoice deductions percentage for each cutomer with year
-Post_invoice_deductions
-Post invoice deductions and other deductions details
-Importing data into PowerBi
-As the database is MySQL in this project, we need to import the datasets from Mysql database to PowerBi by providing the Database access credential
+# 🛠️ Tech Stack
 
-#Data Model
-Data modeling plays a vital role and is considered as the basement of report. All the visuals will be build upon the data model.
-Poor data modeling affects the over all performance of the report.
-Following Good practices of data modeling is must. Refer this page to get to know the good practices Blog
-In this project, we have followed Snowfall data modeling method.
-<img width="1554" height="847" alt="data model" src="https://github.com/user-attachments/assets/7aedd1f9-fe42-4fdc-8fc8-05d14e98d5d0" />
+| Technology           | Purpose                                     |
+| -------------------- | ------------------------------------------- |
+| **SQL / MySQL**      | Data extraction and analysis                |
+| **Power BI Desktop** | Dashboard development and visualization     |
+| **Power Query / M**  | Data transformation and date-table creation |
+| **DAX**              | Measures, KPIs and calculations             |
+| **Excel**            | Data analysis and validation                |
+| **DAX Studio**       | DAX performance optimization                |
+| **Power BI Service** | Publishing and sharing reports              |
+| **GitHub LFS**       | Managing large project files                |
+
+---
+
+# 📚 Power BI Skills & Techniques Learned
+
+During this project, I learned and implemented the following Power BI concepts:
+
+### 🔹 Project Planning
+
+Before starting dashboard development, it is important to understand the business requirement and stakeholder expectations.
+
+* Understanding project objectives
+* Identifying stakeholder requirements
+* Defining project success criteria
+* Understanding project deadlines
+* Identifying risks and challenges
+* Understanding required datasets and resources
+* Gathering dashboard design requirements
+* Understanding stakeholder expectations
+
+### 🔹 Data Transformation & Modeling
+
+* Data cleaning and transformation
+* Creating calculated columns
+* Creating calculated measures
+* Data modeling
+* Creating relationships between tables
+* Implementing **Snowflake data modeling**
+* Creating a date table using **M language**
+* Data validation
+
+### 🔹 DAX
+
+* Creating DAX measures
+* Using `DIVIDE()` to prevent divide-by-zero errors
+* Creating dynamic titles
+* KPI calculations
+* Time intelligence calculations
+* YTD and YTG calculations
+* Conditional calculations
+* Filter-based calculations
+
+### 🔹 Dashboard Development
+
+* Bookmarks to switch between visuals
+* Page navigation using buttons
+* Dynamic titles based on applied filters
+* KPI indicators
+* Conditional formatting
+* Icons and background-color formatting
+* Interactive filters and slicers
+* Mockup-based dashboard development
+
+### 🔹 Power BI Service
+
+* Publishing reports to Power BI Service
+* Creating Power BI Apps
+* Workspace management
+* Collaboration
+* Access permissions
+* Setting up a personal gateway
+* Configuring automatic data refresh
+
+### 🔹 Performance Optimization
+
+* Using DAX Studio
+* Optimizing DAX measures
+* Improving report performance
+* Following Power BI data-modeling best practices
+
+---
+
+# 🏢 Company Background
+
+**AtliQ Hardware** is a hardware company that has expanded rapidly across different countries.
+
+The company sells:
+
+* 💻 Computers
+* 🖥️ Computer accessories
+* 🖱️ Peripherals
+* 🌐 Networking products
+* 💾 Storage products
+
+### Sales Channels
+
+The company sells its products through three major channels:
+
+1. **Retailers**
+2. **Direct**
+3. **Distributors**
+
+### Platforms
+
+The business operates through:
+
+* **Brick & Motors** – Physical/offline stores
+* **E-commerce** – Online platforms such as Amazon and Flipkart
+
+---
+
+# 🎯 Business Problem
+
+AtliQ Hardware faced difficulties in making effective data-driven decisions.
+
+A major example was the company's expansion into the **American market**, where the decision was based largely on:
+
+* Surveys
+* Business intuition
+* Excel-based analysis
+
+The expansion resulted in an unforeseen loss.
+
+At the same time, competitors had dedicated analytics teams that used data to make better strategic decisions.
+
+Therefore, AtliQ Hardware decided to build a strong analytics system to:
+
+* Make data-driven decisions
+* Understand business performance
+* Identify problem areas
+* Improve profitability
+* Monitor sales
+* Optimize supply chain operations
+* Improve marketing decisions
+* Compete more effectively in the market
+
+---
+
+# 🚀 Project Kick-Off
+
+Before developing the dashboard, it is important to clearly understand **what the business wants and why the dashboard is required**.
+
+## Questions to Ask Before Starting a Power BI Project
+
+### 🎯 Business Objectives
+
+* What is the objective of building this Power BI dashboard?
+* What business problem are we trying to solve?
+* What decisions should the dashboard help stakeholders make?
+* In what terms will the success of this project be measured?
+
+### ⏰ Project Planning
+
+* What is the project deadline?
+* Is a preview expected before the final release?
+* What are the major project milestones?
+* What can go wrong while building the project?
+
+### 👥 Stakeholder Requirements
+
+* Who will use the dashboard?
+* What will each stakeholder use the dashboard for?
+* What are the stakeholders expecting from the dashboard?
+* What are their hopes and concerns?
+* Are there any specific design requirements?
+* Which KPIs are most important to stakeholders?
+
+### 📊 Data Requirements
+
+* What data is required?
+* Where is the data stored?
+* How frequently is the data updated?
+* What resources are required to build the dashboard?
+* Are there any data-quality issues?
+
+---
+
+# 🗄️ Dataset Understanding
+
+Understanding the available data is one of the most important steps before beginning analysis.
+
+The project database contains **dimension tables** and **fact tables**.
+
+## Dimension Tables
+
+Dimension tables generally contain descriptive or relatively static information about business entities such as customers, products, and markets.
+
+## Fact Tables
+
+Fact tables contain transactional or measurable business data such as sales quantity and forecast quantity.
+
+---
+
+# 🗃️ Database: `gdb041`
+
+## 👥 `dim_customer`
+
+Contains customer-related information.
+
+Key information:
+
+* **75 distinct customers**
+* **27 distinct markets**
+* 2 platforms:
+
+  * Brick & Motors
+  * E-commerce
+* 3 channels:
+
+  * Retailer
+  * Direct
+  * Distributor
+
+---
+
+## 🌎 `dim_market`
+
+Contains market and geographical information.
+
+Key information:
+
+* **27 distinct markets**
+* **7 sub-zones**
+* **4 regions**
+
+### Regions
+
+* APAC
+* EU
+* LATAM
+* NA
+
+---
+
+## 📦 `dim_product`
+
+Contains product-related information.
+
+### Divisions
+
+* P & A
+* Peripherals
+* Accessories
+* PC
+* N & S
+* Networking
+* Storage
+
+### Product Categories
+
+The dataset contains approximately **14 different product categories**, such as:
+
+* Internal HDD
+* Keyboard
+* And other hardware categories
+
+There are also multiple **variants** available for the same product.
+
+---
+
+# 📈 `fact_forecast_monthly`
+
+This table contains the **forecast quantity** expected from customers.
+
+Forecasting helps the business with:
+
+* Better customer satisfaction
+* Inventory planning
+* Warehouse optimization
+* Reducing unnecessary storage costs
+* Better supply chain planning
+
+### Important Characteristics
+
+* The table is denormalized for analytical purposes.
+* Monthly dates are represented using the **start date of the month**.
+* Forecast quantity represents the expected customer demand.
+
+---
+
+# 💰 `fact_sales_monthly`
+
+This table contains monthly sales information.
+
+It is similar to `fact_forecast_monthly`, but instead of forecast quantity, it contains the actual:
+
+> **Sold Quantity**
+
+This allows us to compare:
+
+**Forecast Quantity vs Actual Sold Quantity**
+
+and identify forecast accuracy and supply chain issues.
+
+---
+
+# 🗄️ Database: `gdb056`
+
+The second database contains additional business-related information.
+
+## 🚚 `freight_cost`
+
+Contains:
+
+* Freight costs
+* Other transportation-related costs
+* Market information
+* Fiscal year information
+
+---
+
+## 💵 `gross_price`
+
+Contains:
+
+* Product codes
+* Gross prices
+
+---
+
+## 🏭 `manufacturing_cost`
+
+Contains:
+
+* Product codes
+* Manufacturing costs
+* Fiscal year
+
+---
+
+## 📉 `pre_invoice_deductions`
+
+Contains:
+
+* Customer information
+* Pre-invoice deduction percentage
+* Fiscal year
+
+---
+
+## 📉 `post_invoice_deductions`
+
+Contains:
+
+* Post-invoice deductions
+* Other deduction-related information
+
+---
+
+# 🔌 Importing Data into Power BI
+
+The project database is based on **MySQL**.
+
+The datasets were imported into Power BI by connecting Power BI Desktop directly to the MySQL database using the required database credentials.
+
+### Basic Flow
+
+```text
+MySQL Database
+       ↓
+Power BI
+       ↓
+Power Query
+       ↓
+Data Transformation
+       ↓
+Data Model
+       ↓
+DAX Measures
+       ↓
+Dashboard
+```
+
+---
+
+# 🧩 Data Model
+
+Data modeling plays a vital role in Power BI and acts as the **foundation of the entire report**.
+
+All visuals, measures, filters, and calculations depend on the underlying data model.
+
+A poor data model can result in:
+
+* Poor report performance
+* Incorrect calculations
+* Difficult DAX
+* Slow visuals
+* Complicated relationships
+
+Therefore, following proper data-modeling practices is essential.
+
+For this project, a **Snowflake Data Model** was implemented.
+
+## 📊 Data Model
+
+![Business Insights 360 Data Model] <img width="1554" height="847" alt="data model" src="https://github.com/user-attachments/assets/dfeb4a1c-7377-45e4-9e3e-64b9de718183" />
 
 
-#Dashboard designing
-Based on the mock ups received as requirement, the team will start designing the visuals and create measure as and when required
-Info Page
-Finance View
-Sales View
-Marketing View
-Supply chain View
-Executive View
+---
 
-#Overall Report
+# 🎨 Dashboard Design
 
-#Home view
-In Home view, all the views button will be available. User will land on specific view page by clicking the button
+After understanding the requirements and creating the data model, the dashboard was developed based on the provided business mockups.
 
-Info
-Finance View
-Sales View
-Marketing View
-Supply chain View
-Executive View
-Support
-<img width="1423" height="845" alt="Screenshot 2026-10-05 113824" src="https://github.com/user-attachments/assets/e8785481-28cf-486d-935e-12b155135406" />
+The report consists of the following major views:
 
-#Info
-<img width="1423" height="849" alt="info" src="https://github.com/user-attachments/assets/068ed1b4-f3a0-4651-849e-72f00ca8c14d" />
+1. 🏠 Home
+2. ℹ️ Info
+3. 💰 Finance View
+4. 📈 Sales View
+5. 📢 Marketing View
+6. 🚚 Supply Chain View
+7. 👔 Executive View
+8. 🆘 Support
 
-#Finance View
-<img width="1419" height="842" alt="Financeview" src="https://github.com/user-attachments/assets/66f3ea50-230d-4477-b959-3dcb636415f0" />
+---
 
-#Sales View
-<img width="1465" height="840" alt="Sales View" src="https://github.com/user-attachments/assets/40d4a513-5bbd-4a9d-a05f-96856b71fb20" />
+# 🏠 Home View
 
-#Marketing View
-<img width="1427" height="843" alt="Marketingview" src="https://github.com/user-attachments/assets/7b92319c-109e-4306-bdbb-d249d0bf68ce" />
+The **Home View** acts as the navigation page for the entire report.
 
-#Supply chain View
-<img width="1426" height="851" alt="Screenshot 2026-10-05 114014" src="https://github.com/user-attachments/assets/f92c191b-c4a7-4ed7-b14c-c3533fe7fe23" />
+Users can navigate to different business views using interactive buttons.
 
-#Executive View
-<img width="1429" height="843" alt="Executive view" src="https://github.com/user-attachments/assets/6c80def3-ffc1-4a71-9bff-e33f4ae32e2a" />
+### Available Views
 
-#Support
-<img width="1424" height="848" alt="support" src="https://github.com/user-attachments/assets/a117aae9-fcae-455d-850a-22bf09209577" />
+* ℹ️ Info
+* 💰 Finance
+* 📈 Sales
+* 📢 Marketing
+* 🚚 Supply Chain
+* 👔 Executive
+* 🆘 Support
+
+This makes the report more interactive and user-friendly.
+ <img width="1423" height="845" alt="Screenshot 2026-10-05 113824" src="https://github.com/user-attachments/assets/9c9159d2-d012-4f72-a805-68cee9cc4b79" />
 
 
-Project Outcome
-By using this report, decisions can be taken based on the data. Further it will help in answering n number of why questions based on the situations.
+# 💰 Finance View
+
+The Finance View provides insights into the company's financial performance.
+
+It helps stakeholders analyze metrics such as:
+
+* Net Sales
+* Gross Margin
+* Gross Margin %
+* Net Profit
+* Net Profit %
+* Cost of Goods Sold
+* Year-to-Date performance
+* Year-to-Go performance
+
+---  <img width="1419" height="842" alt="Financeview" src="https://github.com/user-attachments/assets/37906beb-cbdc-4214-8609-9d3771cc1531" />
+
+
+# 📈 Sales View
+
+The Sales View helps analyze sales performance across:
+
+* Customers
+* Products
+* Markets
+* Regions
+* Channels
+* Time periods
+
+It helps identify high-performing and underperforming areas of the business.
+
+---  <img width="1465" height="840" alt="Sales View" src="https://github.com/user-attachments/assets/cdbc3a8d-5121-4425-bdac-2f08b9a30c40" />
+
+
+# 📢 Marketing View
+
+The Marketing View provides insights into:
+
+* Product performance
+* Customer segments
+* Markets
+* Regions
+* Sales performance
+* Profitability
+
+This helps the marketing team understand where business opportunities exist.
+
+--- <img width="1427" height="843" alt="Marketingview" src="https://github.com/user-attachments/assets/8edde3c4-5568-433c-954f-02a3e3b015e7" />
+
+
+# 🚚 Supply Chain View
+
+The Supply Chain View focuses on:
+
+* Forecast quantity
+* Actual sold quantity
+* Forecast accuracy
+* Net error
+* Product demand
+* Customer demand
+* Supply chain performance
+
+This helps identify gaps between **forecasted demand and actual demand**.
+
+---  <img width="1426" height="851" alt="Screenshot 2026-10-05 114014" src="https://github.com/user-attachments/assets/b2c77551-9ef4-41e5-b225-71db20aebb27" />
+
+
+# 👔 Executive View
+
+The Executive View provides a high-level summary of the company's overall performance.
+
+It allows senior management to quickly understand:
+
+* Overall sales
+* Profitability
+* Gross margin
+* Customer performance
+* Market performance
+* Product performance
+* Supply chain performance
+
+---  <img width="1429" height="843" alt="Executive view" src="https://github.com/user-attachments/assets/e4db07e9-2b3e-4f83-bc1a-1d85cb36a9d6" />
+
+* ℹ️ Info
+ <img width="1423" height="849" alt="info" src="https://github.com/user-attachments/assets/45d237ed-9e7b-4b28-80c1-27244798ee94" />
+* 🆘 Support 
+<img width="1424" height="848" alt="support" src="https://github.com/user-attachments/assets/de38bf21-5c48-4c24-b774-fb4a7a1c8ae5" />
+
+# 📖 Business Terminology
+
+During this project, I learned and implemented several important business concepts.
+
+| Term                       | Meaning                                      |
+| -------------------------- | -------------------------------------------- |
+| **Gross Price**            | Initial price of a product before deductions |
+| **Pre-Invoice Deduction**  | Deduction applied before invoicing           |
+| **Post-Invoice Deduction** | Deduction applied after invoicing            |
+| **Net Invoice Sale**       | Sales value after applicable deductions      |
+| **Net Sales**              | Revenue after deductions                     |
+| **Gross Margin**           | Net Sales minus Cost of Goods Sold           |
+| **Net Profit**             | Profit after applicable costs and expenses   |
+| **COGS**                   | Cost of Goods Sold                           |
+| **YTD**                    | Year to Date                                 |
+| **YTG**                    | Year to Go                                   |
+| **Direct**                 | Products sold directly to customers          |
+| **Retailer**               | Products sold through retail businesses      |
+| **Distributor**            | Products sold through distribution partners  |
+
+---
+
+# 📂 GitHub Large File Management
+
+The project contains large Power BI-related files.
+
+To manage large files efficiently, I learned how to use **Git Large File Storage (Git LFS)**.
+
+### Topics Covered
+
+* Uploading large files using Git LFS
+* Tracking specific file extensions
+* Managing large Power BI project files
+* Working with GitHub repositories
+
+Example:
+
+```bash
+git lfs install
+git lfs track "*.pbix"
+git add .
+git commit -m "Add Power BI project"
+git push
+```
+
+---
+
+# 🎯 Key Learning Outcomes
+
+This project helped me gain practical experience in the complete **Business Intelligence workflow**:
+
+```text
+Business Requirement
+        ↓
+Project Kick-Off
+        ↓
+Dataset Understanding
+        ↓
+Data Extraction
+        ↓
+Data Cleaning
+        ↓
+Data Modeling
+        ↓
+DAX Calculations
+        ↓
+Dashboard Development
+        ↓
+Data Validation
+        ↓
+Performance Optimization
+        ↓
+Power BI Service
+        ↓
+Report Publishing
+        ↓
+Business Insights
+```
+
+### Major Skills Developed
+
+✅ SQL
+✅ Power BI
+✅ DAX
+✅ Power Query
+✅ Data Modeling
+✅ Data Visualization
+✅ Business Intelligence
+✅ KPI Development
+✅ Data Validation
+✅ Dashboard Design
+✅ Performance Optimization
+✅ DAX Studio
+✅ Power BI Service
+✅ Git & GitHub LFS
+
+---
+
+# 🙏 Acknowledgement
+
+This project was developed by following the **Codebasics Power BI course**.
+---
+
+# ⭐ Conclusion
+
+The **Business Insights 360** project provided hands-on experience in transforming raw business data into an interactive and decision-supporting Power BI solution.
+
+The project helped me understand not only the technical aspects of Power BI, SQL, and DAX, but also the importance of:
+
+> **Understanding the business problem before building the dashboard.**
+
+This project strengthened my understanding of **Data Analytics, Business Intelligence, Data Modeling, DAX, and Power BI reporting**.
